@@ -1,8 +1,11 @@
 Timestamp-js
 =========================
 
+<<<<<<< HEAD
 Export Test
 
+=======
+>>>>>>> 08272ae86c934a28c581a722779b3e5c4116c524
 Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
 
 **Glitch** is the friendly commmunity where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
