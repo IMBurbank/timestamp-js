@@ -17,11 +17,7 @@
     "node": "8.x"
   },
   "repository": {
-<<<<<<< HEAD
-    "url": "https://github.com/IMBurbank/timestamp-js"
-=======
     "url": "https://glitch.com/edit/#!/welcome-project"
->>>>>>> 08272ae86c934a28c581a722779b3e5c4116c524
   },
   "license": "MIT",
   "keywords": [
