@@ -1,29 +1,32 @@
 Timestamp-js
 =========================
 
-Starting for real.
+Welcome to the Timestamp-js microservice.
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+This microservice will return a string containing Unix and natural date timestamps in json format. 
 
-**Glitch** is the friendly commmunity where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+**To use,** pass a Unix or natural time string as a parameter to the url. The API will determine whether the parameter is a Unix or natural time string. API will retirn null values for invalid date strings.
 
-Find out more [about Glitch](https://glitch.com/about).
+Try it out [on Glitch](https://timestamp-js.glitch.me/).
 
 
-Your Project
+Example Usage
 ------------
 
-On the front-end,
-- edit `public/client.js`, `public/style.css` and `views/index.html`
-- drag in `assets`, like images or music, to add them to your project
+*Example Query*
+- `https://timestamp-js.glitch.me/July%2031,%202017` or
+- `https://timestamp-js.glitch.me/July 31, 2017` or
+- `https://timestamp-js.glitch.me/1501459200000`
 
-On the back-end,
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
+*Will return*
+- `{"unix":1501459200000,"natural":"July 31, 2017"}`
+
+*Example Query*
+- `https://timestamp-js.glitch.me/Not a date`
+
+*Will return*
+- `{"unix":null,"natural":null}`
 
 
-Made by [Fog Creek](https://fogcreek.com/)
+Made by [Isaac Burbank](https://github.com/IMBurbank)
 -------------------
-
-\ ゜o゜)ノ
