@@ -1,26 +1,19 @@
 // client-side js
 // run by the browser each time your view template is loaded
 
-// by default, you've got jQuery,
-// add other scripts at the bottom of index.html
 
-$(function() {
-  console.log('hello world :o');
+(function() {
+  console.log('Fetch Example:');
   
-  $.get('/dreams', function(dreams) {
-    dreams.forEach(function(dream) {
-      $('<li></li>').text(dream).appendTo('ul#dreams');
-    });
-  });
+  fetch('https://timestamp-js.glitch.me/July 31, 2017')
+    .then( response => {
+      if (response.ok) return response.json();
+      throw new Error('Network response was not ok.')
+    })
+    .then( response => {
+      console.log('Sample url query: ', 'https://timestamp-js.glitch.me/July 31, 2017');
+      console.log('Sample response: ', JSON.stringify(response))
+    })
+    .catch( err => console.error(err) );
 
-  $('form').submit(function(event) {
-    event.preventDefault();
-    var dream = $('input').val();
-    $.post('/dreams?' + $.param({dream: dream}), function() {
-      $('<li></li>').text(dream).appendTo('ul#dreams');
-      $('input').val('');
-      $('input').focus();
-    });
-  });
-
-});
+}());
